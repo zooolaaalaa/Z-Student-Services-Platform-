@@ -1,0 +1,23 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.6.0
+2 info using node@v24.9.0
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/usr/tmp/.create-expo-app/template-cache/.npmrc
+5 silly config load:file:/data/data/com.termux/files/home/.npmrc
+6 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+7 verbose title npm pack expo-template-blank@latest
+8 verbose argv "pack" "expo-template-blank@latest" "--dry-run" "--json"
+9 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2025-11-02T21_00_38_714Z-
+10 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2025-11-02T21_00_38_714Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET 200 https://registry.npmjs.org/expo-template-blank 1755ms (cache miss)
+13 http cache https://registry.npmjs.org/expo-template-blank 27ms (cache hit)
+14 http cache https://registry.npmjs.org/expo-template-blank/-/expo-template-blank-54.0.31.tgz 0ms (cache hit)
+15 silly tarball no local data for https://registry.npmjs.org/expo-template-blank/-/expo-template-blank-54.0.31.tgz. Extracting by manifest.
+16 http fetch GET 200 https://registry.npmjs.org/expo-template-blank/-/expo-template-blank-54.0.31.tgz 309ms (cache miss)
+17 verbose cwd /data/data/com.termux/files/usr/tmp/.create-expo-app/template-cache
+18 verbose os Linux 5.4.259-qgki-gf6360e97909c
+19 verbose node v24.9.0
+20 verbose npm  v11.6.0
+21 verbose exit 0
+22 info ok

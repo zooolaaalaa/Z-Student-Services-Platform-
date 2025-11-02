@@ -1,0 +1,29 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@11.6.0
+2 info using node@v24.9.0
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/backend/.npmrc
+5 silly config load:file:/data/data/com.termux/files/home/.npmrc
+6 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+7 verbose title npm exec create-expo-app mobile-app --template blank
+8 verbose argv "exec" "--" "create-expo-app" "mobile-app" "--template" "blank"
+9 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2025-11-02T20_56_43_655Z-
+10 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2025-11-02T20_56_43_655Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:1174405120 maxSize:293601280 maxEntrySize:146800640
+13 http fetch GET 200 https://registry.npmjs.org/create-expo-app 1772ms (cache revalidated)
+14 silly packumentCache heap:1174405120 maxSize:293601280 maxEntrySize:146800640
+15 silly packumentCache heap:1174405120 maxSize:293601280 maxEntrySize:146800640
+16 verbose stack Error: canceled
+16 verbose stack     at exec (/data/data/com.termux/files/usr/lib/node_modules/npm/node_modules/libnpmexec/lib/index.js:289:19)
+16 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+16 verbose stack     at async Npm.exec (/data/data/com.termux/files/usr/lib/node_modules/npm/lib/npm.js:208:9)
+16 verbose stack     at async module.exports (/data/data/com.termux/files/usr/lib/node_modules/npm/lib/cli/entry.js:60:5)
+17 error canceled
+18 verbose cwd /data/data/com.termux/files/home/backend
+19 verbose os Linux 5.4.259-qgki-gf6360e97909c
+20 verbose node v24.9.0
+21 verbose npm  v11.6.0
+22 verbose exit 1
+23 verbose code 1
+24 error A complete log of this run can be found in: /data/data/com.termux/files/home/.npm/_logs/2025-11-02T20_56_43_655Z-debug-0.log

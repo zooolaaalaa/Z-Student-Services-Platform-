@@ -1,0 +1,35 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@11.6.0
+2 info using node@v24.9.0
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/backend/.npmrc
+5 silly config load:file:/data/data/com.termux/files/home/.npmrc
+6 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+7 verbose title npm exec create-expo-app mobile-app --template blank
+8 verbose argv "exec" "--" "create-expo-app" "mobile-app" "--template" "blank"
+9 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2025-11-02T21_00_26_154Z-
+10 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2025-11-02T21_00_26_154Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:1174405120 maxSize:293601280 maxEntrySize:146800640
+13 http fetch GET 200 https://registry.npmjs.org/create-expo-app 1335ms (cache revalidated)
+14 silly packumentCache heap:1174405120 maxSize:293601280 maxEntrySize:146800640
+15 silly packumentCache heap:1174405120 maxSize:293601280 maxEntrySize:146800640
+16 silly idealTree buildDeps
+17 silly fetch manifest create-expo-app@3.5.3
+18 silly packumentCache full:https://registry.npmjs.org/create-expo-app cache-miss
+19 http fetch GET 200 https://registry.npmjs.org/create-expo-app 236ms (cache miss)
+20 silly packumentCache full:https://registry.npmjs.org/create-expo-app set size:undefined disposed:false
+21 silly placeDep ROOT create-expo-app@3.5.3 OK for:  want: 3.5.3
+22 silly reify moves {}
+23 silly audit bulk request { 'create-expo-app': [ '3.5.3' ] }
+24 http cache create-expo-app@https://registry.npmjs.org/create-expo-app/-/create-expo-app-3.5.3.tgz 0ms (cache hit)
+25 silly tarball no local data for create-expo-app@https://registry.npmjs.org/create-expo-app/-/create-expo-app-3.5.3.tgz. Extracting by manifest.
+26 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 384ms
+27 silly audit report {}
+28 http fetch GET 200 https://registry.npmjs.org/create-expo-app/-/create-expo-app-3.5.3.tgz 2849ms (cache miss)
+29 verbose cwd /data/data/com.termux/files/home/backend
+30 verbose os Linux 5.4.259-qgki-gf6360e97909c
+31 verbose node v24.9.0
+32 verbose npm  v11.6.0
+33 verbose exit 0
+34 info ok
