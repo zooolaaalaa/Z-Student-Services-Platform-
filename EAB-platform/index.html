@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAB Learning | الخدمات التعليمية</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-light: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background: var(--bg); color: var(--primary); line-height: 1.6; }
+
+        /* Navigation */
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .logo { font-weight: 900; font-size: 1.6rem; color: var(--primary); }
+        .logo span { color: var(--accent); }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 8% 60px; text-align: center;
+            background: radial-gradient(circle at top right, #e2e8f0 0%, #f8fafc 100%);
+        }
+        .hero h1 { font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; color: var(--text-light); max-width: 700px; margin: 0 auto 30px; }
+
+        /* Categories / Filter */
+        .categories {
+            display: flex; justify-content: center; gap: 15px; padding: 0 8% 40px; flex-wrap: wrap;
+        }
+        .cat-btn {
+            padding: 8px 20px; border-radius: 50px; background: white; 
+            border: 1px solid #e2e8f0; cursor: pointer; font-weight: 700; transition: 0.3s;
+        }
+        .cat-btn.active, .cat-btn:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+        /* Grid System */
+        .grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; padding: 0 8% 80px;
+        }
+
+        /* Card Design (Inspired by edX) */
+        .card {
+            background: var(--card); border-radius: 20px; overflow: hidden;
+            border: 1px solid #e2e8f0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex; flex-direction: column;
+        }
+        .card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); border-color: var(--accent); }
+        
+        .card-image {
+            height: 200px; background: #e5e7eb; display: flex; align-items: center;
+            justify-content: center; font-size: 4rem; color: var(--accent);
+            background: linear-gradient(45deg, #f1f5f9, #ffffff);
+        }
+
+        .card-content { padding: 25px; flex-grow: 1; }
+        .card-content h3 { font-weight: 900; font-size: 1.4rem; margin-bottom: 12px; }
+        .card-content p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; height: 50px; overflow: hidden; }
+
+        .card-footer {
+            padding: 20px 25px; border-top: 1px solid #f1f5f9;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .price { font-weight: 900; color: var(--accent); font-size: 1.1rem; }
+        
+        .btn-order {
+            padding: 10px 25px; background: var(--primary); color: white;
+            text-decoration: none; border-radius: 12px; font-weight: 700;
+            transition: 0.3s;
+        }
+        .btn-order:hover { background: var(--accent); }
+
+        /* Mobile Fix */
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .grid { padding: 0 5% 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">EAB <span>Learning</span></div>
+        <div class="nav-icons">
+            <a href="login.html" style="color: var(--primary); font-size: 1.5rem;"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="animate__animated animate__fadeInDown">مستقبلك الأكاديمي يبدأ هنا</h1>
+        <p class="animate__animated animate__fadeInUp">نقدم لك نخبة من الخدمات التعليمية المصممة بعناية لتناسب طموحاتك، بإشراف أخصائيين محترفين.</p>
+    </header>
+
+    <div class="categories">
+        <button class="cat-btn active">الكل</button>
+        <button class="cat-btn">أبحاث</button>
+        <button class="cat-btn">برمجة</button>
+        <button class="cat-btn">تصميم</button>
+    </div>
+
+    <div class="grid">
+
+        <div class="card animate__animated animate__zoomIn">
+            <div class="card-image"><i class="fas fa-microscope"></i></div>
+            <div class="card-content">
+                <h3>إعداد البحوث العلمية</h3>
+                <p>كتابة أكاديمية وفق معايير الجامعات العالمية مع توثيق كامل للمصادر.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">تبدأ من ١٥ ر.ع</span>
+                <a href="login.html" class="btn-order">اطلب الآن</a>
+            </div>
+        </div>
+
+        <div class="card animate__animated animate__zoomIn" style="animation-delay: 0.1s;">
+            <div class="card-image"><i class="fas fa-laptop-code"></i></div>
+            <div class="card-content">
+                <h3>المشاريع البرمجية</h3>
+                <p>حلول تقنية مخصصة، من تطبيقات الويب إلى تحليل البيانات المعقدة.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">حسب المشروع</span>
+                <a href="login.html" class="btn-order">اطلب الآن</a>
+            </div>
+        </div>
+
+        <div class="card animate__animated animate__zoomIn" style="animation-delay: 0.2s;">
+            <div class="card-image"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="card-content">
+                <h3>حقائب تعليمية</h3>
+                <p>تصميم متكامل للعروض التقديمية ووسائل الشرح التفاعلية للمجال التربوي.</p>
+            </div>
+            <div class="card-footer">
+                <span class="price">تبدأ من ١٠ ر.ع</span>
+                <a href="login.html" class="btn-order">اطلب الآن</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

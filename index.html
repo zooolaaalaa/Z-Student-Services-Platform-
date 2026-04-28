@@ -1,188 +1,227 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>StudentHub — منصة الخدمات الطلابية</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | منصة الأخصائية غيداء الحواشم</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --main-color: #003366;
+            --accent-color: #ffc107;
+            --dark-bg: #0f172a;
+            --glass-bg: rgba(255, 255, 255, 0.9);
+        }
 
-  <meta name="description" content="StudentHub — منصة خدمات طلابية متكاملة للجامعات والمعاهد (تسجيل، شؤون طلاب، منح، تقويم أكاديمي)." />
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--main-color) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
 
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        .navbar {
+            background: rgba(15, 23, 42, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+        }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
 
-  <style>
-    /* إضافة تنسيق داخلي لضمان عمل الألوان فوراً */
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
-    .hero-section { background: linear-gradient(135deg, #0d6efd 0%, #000 100%); color: white; padding: 100px 0; }
-    .card { border: none; transition: transform 0.3s; margin-bottom: 20px; }
-    .card:hover { transform: translateY(-10px); }
-  </style>
+        .stat-card {
+            background: white;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            background: var(--main-color);
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        /* كود الأنظمة المتقدمة من ملفك */
+        .notification-toast {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9999;
+            min-width: 250px;
+        }
+    </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <i class="fa-solid fa-graduation-cap me-2"></i>
-        <span class="fw-bold">StudentHub</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#hero">الرئيسية</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">الخدمات الطلابية</a></li>
-          <li class="nav-item"><a class="nav-link" href="#calendar">التقويم الأكاديمي</a></li>
-          <li class="nav-item"><a class="nav-link" href="#grants">المنح</a></li>
-          <li class="nav-item"><a class="nav-link" href="#support">الدعم</a></li>
-          <li class="nav-item">
-            <a href="#login" class="btn btn-outline-light btn-sm ms-2">تسجيل الدخول</a>
-          </li>
-        </ul>
-      </div>
+        <a class="navbar-brand fw-bold fs-3" href="#">Student<span class="text-warning">Hub</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">الخدمات الأكاديمية</a></li>
+                <li class="nav-item"><a class="nav-link" href="#stats">الإحصائيات</a></li>
+                <li class="nav-item"><a class="nav-link text-warning" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-lock"></i> دخول</a></li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <header id="hero" class="hero-section py-5">
+<header class="hero text-center">
+    <div class="container" data-aos="fade-up">
+        <h1 class="display-3 fw-bold mb-3">منصة الخدمات الأكاديمية المتكاملة</h1>
+        <p class="lead mb-4 fs-4">بإشراف الأخصائية <span class="text-warning fw-bold">غيداء الحواشم</span></p>
+        <div class="d-flex justify-content-center gap-3">
+            <button class="btn btn-warning btn-lg px-5 fw-bold" data-bs-toggle="modal" data-bs-target="#registerModal">ابدأ الآن</button>
+            <button class="btn btn-outline-light btn-lg px-5">رؤية أعمالنا</button>
+        </div>
+    </div>
+</header>
+
+<section id="stats" class="py-5 mt-n5">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6" data-aos="fade-left">
-          <h1 class="display-5 fw-bold">StudentHub</h1>
-          <p class="lead">منصة الخدمات الطلابية المتكاملة — تسهيل إجراءات التسجيل، الشؤون، المنح، والتقويم الأكاديمي.</p>
-          <div class="d-flex gap-2 mt-3">
-            <a href="#services" class="btn btn-light btn-lg">استعراض الخدمات</a>
-            <a href="#login" class="btn btn-outline-light btn-lg">دخول كطالب</a>
-          </div>
+        <div class="row g-4 text-center">
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card stat-card p-4">
+                    <h2 class="fw-bold text-primary">+1200</h2>
+                    <p class="text-muted mb-0">طالب مستفيد</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card stat-card p-4">
+                    <h2 class="fw-bold text-success">550</h2>
+                    <p class="text-muted mb-0">تقرير وبحث منجز</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card stat-card p-4">
+                    <h2 class="fw-bold text-info">85</h2>
+                    <p class="text-muted mb-0">استشارة تعليمية</p>
+                </div>
+            </div>
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+                <div class="card stat-card p-4">
+                    <h2 class="fw-bold text-warning">18</h2>
+                    <p class="text-muted mb-0">كورس تدريبي</p>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-6 text-center" data-aos="fade-right">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=900&auto=format&fit=crop"
-               class="img-fluid rounded shadow-lg" alt="منصة خدمات طلابية">
-        </div>
-      </div>
     </div>
-  </header>
+</section>
 
-  <section id="services" class="py-5">
+<section id="services" class="py-5 bg-white">
     <div class="container">
-      <div class="text-center mb-4" data-aos="fade-up">
-        <h2 class="fw-bold">الخدمات الطلابية</h2>
-        <p class="text-muted">مجموعة من الخدمات الإلكترونية المتاحة للطلاب.</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="zoom-in">
-          <div class="card h-100 shadow-sm p-3">
-            <i class="fa-solid fa-user-plus fa-2x text-primary mb-3"></i>
-            <h5>إعادة التسجيل</h5>
-            <p class="small text-muted">تقديم طلب إعادة التسجيل واستكمال المتطلبات.</p>
-            <a href="#login" class="stretched-link">طلب الآن</a>
-          </div>
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-5">ماذا نقدم؟</h2>
+            <div class="mx-auto bg-warning" style="height: 4px; width: 100px;"></div>
         </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="card h-100 shadow-sm p-3">
-            <i class="fa-solid fa-file-alt fa-2x text-primary mb-3"></i>
-            <h5>الوثائق والشهادات</h5>
-            <p class="small text-muted">طلب إصدار الشهادات أو كشف الدرجات.</p>
-            <a href="#login" class="stretched-link">طلب الآن</a>
-          </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-right">
+                <div class="card h-100 p-4 text-center border-light shadow-sm">
+                    <div class="service-icon mx-auto"><i class="fas fa-edit"></i></div>
+                    <h4>كتابة التقارير</h4>
+                    <p class="text-muted">نقدم خدمة صياغة التقارير الجامعية والأكاديمية بأسلوب احترافي لطلاب جامعة السلطان قابوس.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card h-100 p-4 text-center border-light shadow-sm">
+                    <div class="service-icon mx-auto"><i class="fas fa-project-diagram"></i></div>
+                    <h4>تنظيم البيانات</h4>
+                    <p class="text-muted">تحليل وتنظيم البيانات الأكاديمية واستخدام الأدوات التقنية الحديثة لرفع الكفاءة.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-left">
+                <div class="card h-100 p-4 text-center border-light shadow-sm">
+                    <div class="service-icon mx-auto"><i class="fas fa-laptop-code"></i></div>
+                    <h4>الدعم التقني الأكاديمي</h4>
+                    <p class="text-muted">مساعدة الطلاب في التعامل مع المنصات التعليمية وحل المشكلات البرمجية البسيطة.</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="card h-100 shadow-sm p-3">
-            <i class="fa-solid fa-award fa-2x text-primary mb-3"></i>
-            <h5>المنح والمساعدات</h5>
-            <p class="small text-muted">التقديم على المنح الدراسية المتاحة.</p>
-            <a href="#grants" class="stretched-link">تقديم طلب</a>
-          </div>
+    </div>
+</section>
+
+<div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">تسجيل دخول الطالب</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label class="form-label">اسم المستخدم</label>
+                        <input type="text" class="form-control rounded-pill" placeholder="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">كلمة المرور</label>
+                        <input type="password" class="form-control rounded-pill" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 rounded-pill py-2">دخول آمن</button>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</div>
 
-  <section id="calendar" class="py-5 bg-white">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="fw-bold">التقويم الأكاديمي</h2>
-      </div>
-      <div class="table-responsive shadow-sm">
-        <table class="table table-bordered text-center">
-          <thead class="table-primary">
-            <tr>
-              <th>الفترة</th>
-              <th>بداية الفصل</th>
-              <th>نهاية الفصل</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>الفصل الدراسي الأول</td>
-              <td>1/9/2026</td>
-              <td>30/12/2026</td>
-            </tr>
-            <tr>
-              <td>الفصل الدراسي الثاني</td>
-              <td>10/2/2027</td>
-              <td>15/5/2027</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <section id="support" class="py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-4" data-aos="fade-up">
-        <h2 class="fw-bold">الدعم والمساعدة</h2>
-        <p class="text-muted">استخدم النماذج للشكاوى والمقترحات.</p>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card shadow-sm p-4">
-            <form>
-              <div class="mb-3">
-                <label class="form-label">الرقم الجامعي</label>
-                <input type="text" class="form-control" placeholder="أدخل رقمك الجامعي">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">نوع الطلب</label>
-                <select class="form-control">
-                  <option>شكوى</option>
-                  <option>مقترح</option>
-                  <option>استشارة أكاديمية</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">تفاصيل الرسالة</label>
-                <textarea class="form-control" rows="4" placeholder="اكتب رسالتك هنا..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary w-100">إرسال الطلب</button>
-            </form>
-          </div>
+<footer class="bg-dark text-white py-5">
+    <div class="container text-center">
+        <h3 class="fw-bold mb-3">StudentHub</h3>
+        <p class="text-muted mb-4">المنصة الأكاديمية الأولى بإدارة "الأخصائية غيداء الحواشم"</p>
+        <div class="social-links mb-4">
+            <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-whatsapp fa-lg"></i></a>
         </div>
-      </div>
+        <hr class="w-25 mx-auto mb-4">
+        <p class="small">© 2026 جميع الحقوق محفوظة — منصة EAB</p>
     </div>
-  </section>
+</footer>
 
-  <footer class="py-4 bg-dark text-white mt-5">
-    <div class="container text-center small">
-      <div>© 2026 StudentHub — تحت إشراف الأخصائية غيداء الحواشم</div>
-      <div class="mt-2 text-muted">جميع الحقوق محفوظة - نظام إدارة الخدمات الطلابية</div>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
     AOS.init({ duration: 1000, once: true });
-  </script>
+    
+    // نظام الإشعارات المتطور
+    function showNotification(msg, type="info") {
+        console.log("إشعار: " + msg);
+        alert(msg); // يمكن استبدالها بـ SweetAlert لاحقاً
+    }
+
+    console.log("StudentHub Enterprise Ready 🚀");
+</script>
+
 </body>
 </html>
 

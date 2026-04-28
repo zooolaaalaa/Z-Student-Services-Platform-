@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAB Learning</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+    --primary:#0f172a;
+    --accent:#2563eb;
+    --bg:#f8fafc;
+    --card:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo', sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--primary);
+}
+
+/* ===== Navbar ===== */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:white;
+    position:sticky;
+    top:0;
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    font-weight:900;
+    font-size:1.4rem;
+}
+
+/* ===== Hero ===== */
+.hero{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:2.5rem;
+    font-weight:900;
+}
+
+.hero p{
+    color:#64748b;
+    margin-top:10px;
+}
+
+/* ===== Grid ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:40px 8%;
+}
+
+/* ===== Card ===== */
+.card{
+    background:var(--card);
+    border:1px solid #eee;
+    border-radius:18px;
+    padding:25px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    border-color:var(--accent);
+}
+
+.card i{
+    font-size:2rem;
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-weight:900;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#64748b;
+    font-size:0.9rem;
+}
+
+/* ===== Button ===== */
+.btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:10px 15px;
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:0.9rem;
+}
+
+/* ===== Mobile ===== */
+@media(max-width:768px){
+    .hero h1{font-size:1.8rem;}
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">EAB Learning</div>
+    <div><i class="fas fa-user-circle"></i></div>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+    <h1>خدمات تعليمية احترافية</h1>
+    <p>منصة تجمع بين الجودة، السرعة، والخدمات الأكاديمية الحديثة</p>
+</div>
+
+<!-- Courses Grid -->
+<div class="grid">
+
+    <div class="card">
+        <i class="fas fa-file-alt"></i>
+        <h3>إعداد الأبحاث</h3>
+        <p>كتابة أبحاث وتقارير أكاديمية منظمة واحترافية</p>
+        <a class="btn" href="#">طلب الخدمة</a>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-code"></i>
+        <h3>مشاريع برمجية</h3>
+        <p>تنفيذ مشاريع تقنية وبرمجية حسب الطلب</p>
+        <a class="btn" href="#">طلب الخدمة</a>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>تحليل وتقارير</h3>
+        <p>تحليل بيانات وإعداد تقارير احترافية</p>
+        <a class="btn" href="#">طلب الخدمة</a>
+    </div>
+
+    <div class="card">
+        <i class="fas fa-presentation-screen"></i>
+        <h3>عروض تقديمية</h3>
+        <p>تصميم عروض PowerPoint احترافية وجذابة</p>
+        <a class="btn" href="#">طلب الخدمة</a>
+    </div>
+
+</div>
+
+</body>
+</html>

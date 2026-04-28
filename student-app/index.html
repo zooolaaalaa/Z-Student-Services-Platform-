@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>الخدمات الطلابية</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+textarea {
+  width: 80%;
+  height: 150px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 18px;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>📚 تطبيق الخدمات الطلابية</h1>
+
+<h2>📝 ملاحظاتي</h2>
+
+<textarea id="note" placeholder="اكتب ملاحظاتك هنا..."></textarea>
+
+<button onclick="saveNote()">💾 حفظ</button>
+<button onclick="loadNote()">📂 عرض الملاحظات</button>
+<button onclick="clearNote()">🗑️ حذف</button>
+
+<script>
+function saveNote(){
+  let note = document.getElementById("note").value;
+  localStorage.setItem("myNote", note);
+  alert("تم الحفظ ✅");
+}
+
+function loadNote(){
+  let note = localStorage.getItem("myNote");
+  document.getElementById("note").value = note || "";
+}
+
+function clearNote(){
+  localStorage.removeItem("myNote");
+  document.getElementById("note").value = "";
+  alert("تم الحذف ❌");
+}
+</script>
+
+</body>
+</html>
+
