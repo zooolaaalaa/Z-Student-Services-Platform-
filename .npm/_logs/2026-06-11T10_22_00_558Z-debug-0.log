@@ -1,0 +1,39 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.16.0
+2 info using node@v26.2.0
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/.npmrc
+5 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+6 verbose title npm install @supabase/supabase-js
+7 verbose argv "install" "@supabase/supabase-js"
+8 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-06-11T10_22_00_558Z-
+9 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-06-11T10_22_00_558Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:1174405120 maxSize:293601280 maxEntrySize:146800640
+13 silly idealTree buildDeps
+14 silly fetch manifest @supabase/supabase-js@^2.108.1
+15 silly packumentCache full:https://registry.npmjs.org/@supabase%2fsupabase-js cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/@supabase%2fsupabase-js 7385ms (cache updated)
+17 silly packumentCache full:https://registry.npmjs.org/@supabase%2fsupabase-js set size:undefined disposed:false
+18 silly placeDep ROOT @supabase/supabase-js@2.108.1 REPLACE for:  want: ^2.108.1
+19 silly reify moves {}
+20 silly audit bulk request {
+20 silly audit   '@supabase/auth-js': [ '2.108.1' ],
+20 silly audit   '@supabase/functions-js': [ '2.108.1' ],
+20 silly audit   '@supabase/phoenix': [ '0.4.2' ],
+20 silly audit   '@supabase/postgrest-js': [ '2.108.1' ],
+20 silly audit   '@supabase/realtime-js': [ '2.108.1' ],
+20 silly audit   '@supabase/storage-js': [ '2.108.1' ],
+20 silly audit   'iceberg-js': [ '0.8.1' ],
+20 silly audit   tslib: [ '2.8.1' ],
+20 silly audit   '@supabase/supabase-js': [ '2.108.1' ]
+20 silly audit }
+21 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 345ms
+22 silly audit report {}
+23 verbose cwd /data/data/com.termux/files/home
+24 verbose os Linux 5.4.289-qgki-ga319a11388f1
+25 verbose node v26.2.0
+26 verbose npm  v11.16.0
+27 verbose exit 0
+28 info ok
