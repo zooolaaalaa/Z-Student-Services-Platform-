@@ -1,75 +1,3 @@
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* ألوان عصرية وفخمة */
-        :root {
-            --primary-color: #1a2a6c;
-            --secondary-color: #b21f1f;
-            --accent-color: #fdbb2d;
-            --bg-gradient: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
-            --glass: rgba(255, 255, 255, 0.9);
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-
-        /* رأس الصفحة المتحرك */
-        .hero {
-            background: var(--bg-gradient);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            height: 40vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .hero p { font-size: 1.2rem; opacity: 0.9; }
-
-        /* حاوية المحتوى */
-        .container {
-            max-width: 900px;
-            margin: -50px auto 20px auto;
-            padding: 0 15px;
-        }
-
-        /* بطاقة الترحيب */
-        .main-card {
-            background: var(--glass);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-
-        .main-card h2 { color: var(--primary-color); font-size: 1.8rem; }
-        .main-card p { line-height: 1.8; font-size: 1.1rem; color: #555; }
-
-        /* أزرار سريعة وجذابة */
-        .action-buttons {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            margin-top: 30px;
         }
 
         .btn {
@@ -498,3 +426,75 @@ surge . ghaida-academy.surge.sh
 mkdir -p ~/ghaida_web && cp index.html ~/ghaida_web/index.html
 cd ~/ghaida_web
 surge . ghaida-academy.surge.sh
+nano index.html
+git add index.html
+git commit -m "إعادة بناء الهيكل الأساسي للمنصة"
+git push origin main
+git remote set-url origin https://github.com/eabplatform/EAB-platform.git
+git push origin main
+git remote set-url origin https://YOUR_TOKEN@github.com/eabplatform/EAB-platform.git
+git push origin main
+git remote set-url origin https://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@github.com/eabplatform/EAB-platform.git
+git push origin main
+git remote set-url origin https://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@github.com/eabplatform/EAB-platform.git
+git push origin main
+git remote set-url origin https://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@github.com/eabplatform/EAB-platform.git
+git push origin main
+nano index.html
+git add .
+git commit -m "إطلاق الهيكل الأقوى والأضخم"
+git push origin main --force
+pkg update && pkg upgrade
+pkg install nodejs-lts
+npx create-next-app@latest studenthub --js --tailwind --eslint
+rm -rf studenthub
+npx create-next-app@latest studenthub --use-npm
+cd studenthub
+npm run dev
+mkdir -p app/services app/dashboard app/reports app/projects app/profile
+import { motion } from 'framer-motion';
+export default function Home() {
+}
+app/page.js
+cd ~/studenthub
+npm install framer-motion lucide-react
+nano app/page.js
+npm run dev
+next dev --webpack
+npm run dev
+npx next dev --hostname 0.0.0.0
+npm run dev
+npx next dev --webpack
+python -m http.server 8080
+pkg update && pkg upgrade -y
+termux-setup-storage
+pip install nsz
+cd /sdcard/Download/games
+nsz -d "God Eater 3.nsz"
+cp prod.keys ~/.switch/
+nsz -d "God Eater 3.nsz"
+mkdir -p ~/.switch && cp prod.keys ~/.switch/
+nsz -d "God Eater 3.nsz"
+nsz --decompress "God Eater 3.nsz"
+nsz -x "God Eater 3.nsz"
+termux-setup-storage
+y
+```bash
+   cd /sdcard/Download/games
+
+
+pkg update && pkg upgrade -y
+y
+
+pkg update && pkg upgrade -y
+pkg install python -y
+pip install kivy[base] kivymd
+mkdir sinah_app
+cd sinah_app
+pkg install clang libffi libopenssl libcrypt-dev make -y
+pip install --upgrade pip setuptools wheel
+pip install kivy
+pkg update && pkg upgrade
+pkg install python git
+echo "<h1>مرحباً بك في سيرفر هاتفي الخاص!</h1>" > index.html
+python -m http.server 8080
